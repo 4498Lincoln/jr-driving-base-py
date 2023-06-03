@@ -67,6 +67,3 @@ class DrivingBase {
     
 }
 
-let base = new DrivingBase(140, 6.5)
-console.log(base.get_motor_degps())
-console.log(base.get_motor_cmps())

@@ -44,7 +44,3 @@ class DrivingBase:
         motobit.set_motor_speed(Motor.RIGHT, right_direction, speed)
         pause(pause_time)
         self.stop_motors()
-
-base = DrivingBase(140, 6.5)
-print(base.get_motor_degps())
-print(base.get_motor_cmps())
