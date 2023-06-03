@@ -1,8 +1,4 @@
 class DrivingBase:
-    # Motor/wheel properties
-    motor_max_rpm = 70 # Maximum RPM of motors
-    wheel_diameter = 6.5 # Diameter of wheels in cm
-
     # Initialize
     def __init__(self, motor_max_rpm, wheel_diameter):
         # Configure properties

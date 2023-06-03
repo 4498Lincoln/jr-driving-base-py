@@ -1,34 +1,6 @@
 class DrivingBase {
-    static motor_max_rpm: number
-    private ___motor_max_rpm_is_set: boolean
-    private ___motor_max_rpm: number
-    get motor_max_rpm(): number {
-        return this.___motor_max_rpm_is_set ? this.___motor_max_rpm : DrivingBase.motor_max_rpm
-    }
-    set motor_max_rpm(value: number) {
-        this.___motor_max_rpm_is_set = true
-        this.___motor_max_rpm = value
-    }
-    
-    static wheel_diameter: number
-    private ___wheel_diameter_is_set: boolean
-    private ___wheel_diameter: number
-    get wheel_diameter(): number {
-        return this.___wheel_diameter_is_set ? this.___wheel_diameter : DrivingBase.wheel_diameter
-    }
-    set wheel_diameter(value: number) {
-        this.___wheel_diameter_is_set = true
-        this.___wheel_diameter = value
-    }
-    
-    public static __initDrivingBase() {
-        //  Motor/wheel properties
-        DrivingBase.motor_max_rpm = 70
-        //  Maximum RPM of motors
-        DrivingBase.wheel_diameter = 6.5
-    }
-    
-    //  Diameter of wheels in cm
+    motor_max_rpm: number
+    wheel_diameter: number
     //  Initialize
     constructor(motor_max_rpm: number, wheel_diameter: number) {
         //  Configure properties
@@ -94,8 +66,6 @@ class DrivingBase {
     }
     
 }
-
-DrivingBase.__initDrivingBase()
 
 let base = new DrivingBase(140, 6.5)
 console.log(base.get_motor_degps())
